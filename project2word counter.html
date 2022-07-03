@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+          word and character counter
+        </title>
+        <style>
+           
+            body{
+               
+              
+                padding:60px 100px;
+                background-color: rgb(194, 252, 171);
+               
+            }
+            h1{
+                text-align: center;
+                background-color: rgb(131, 123, 241);
+                color:beige;
+                padding:3px;
+                border-radius: 20px;
+                
+            }
+            textarea{
+                width:99%;
+                border-color:blue;
+                border-radius: 20px;
+                background-image: linear-gradient(blue,rgb(205, 205, 237));
+                font-size:30px;
+               
+               
+            }
+            p{
+                text-align:center;
+                background-color: rgb(190, 190, 247);
+                margin:10px;
+                font-size:20px;
+                font-weight:bold;
+                border-radius: 20px;
+
+            }
+            label{
+                padding:30px;
+                font-size: 30px;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Word And Character Counter</h1>
+        <textarea id="textbox" cols="30" rows="10"></textarea>
+        <p>
+            <span id="word">0</span>words and 
+            <span id="char">0</span>characters
+        </p>
+        <script>
+            let textbox=document.getElementById("textbox");
+            textbox.addEventListener("input",function(){
+            var text=this.value;
+            let char=text.length;
+            document.getElementById("char").innerHTML=char;
+
+            text= text.trim();
+            let words= text.split(" ");
+            let cleanList=words.filter(function(elm){
+                return elm != "";
+            });
+
+            document.getElementById("word").innerHTML=cleanList.length;
+            
+            });
+
+        </script>
+        </body>
+</html>
