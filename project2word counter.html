@@ -2,59 +2,41 @@
 <html>
     <head>
         <title>
-          word and character counter
+          Typing Speed Test Challenge
         </title>
-        <style>
-           
-            body{
-               
-              
-                padding:60px 100px;
-                background-color: rgb(194, 252, 171);
-               
-            }
-            h1{
-                text-align: center;
-                background-color: rgb(131, 123, 241);
-                color:beige;
-                padding:3px;
-                border-radius: 20px;
-                
-            }
-            textarea{
-                width:99%;
-                border-color:blue;
-                border-radius: 20px;
-                background-image: linear-gradient(blue,rgb(205, 205, 237));
-                font-size:30px;
-               
-               
-            }
-            p{
-                text-align:center;
-                background-color: rgb(190, 190, 247);
-                margin:10px;
-                font-size:20px;
-                font-weight:bold;
-                border-radius: 20px;
-
-            }
-            label{
-                padding:30px;
-                font-size: 30px;
-
-            }
-
-        </style>
-
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css1.css">
     </head>
-    <body>
-        <h1>Word And Character Counter</h1>
+    <body >
+      
+        
+        <marquee   scrollamount="12" width="70%" hspace="16%" ><h1 > Typing Speed Test Challenge</h1></marquee>
         <textarea id="textbox" cols="30" rows="10"></textarea>
-        <p>
+  <p>
             <span id="word">0</span>words and 
             <span id="char">0</span>characters
+
         </p>
+        <body >
+        <div id="container">
+            <div id="time">
+                <span class="digit" id="hr">00</span>
+                <span class="txt">Hr</span>
+                <span class="digit" id="min">00</span>
+                <span class="txt">Min</span>
+                <span class="digit" id="sec">00</span>
+                <span class="txt">Sec</span>
+                <span class="digit" id="count">00</span>
+            </div>
+          
+            <div id=" btn-container">
+                <button class="btn" id="start" onclick="start()">Start</button>
+                <button class="btn" id="stop"  onclick="stop()">Stop</button>
+                <button class="btn" id="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+        <script src="watch.js"></script>
         <script>
             let textbox=document.getElementById("textbox");
             textbox.addEventListener("input",function(){
@@ -74,4 +56,5 @@
 
         </script>
         </body>
+    </body>
 </html>
